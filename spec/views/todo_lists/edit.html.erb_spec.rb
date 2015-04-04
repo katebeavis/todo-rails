@@ -7,15 +7,4 @@ RSpec.describe "todo_lists/edit", type: :view do
       :description => "MyText"
     ))
   end
-
-  it "renders the edit todo_list form" do
-    render
-
-    assert_select "form[action=?][method=?]", todo_list_path(@todo_list), "post" do
-
-      assert_select "input#todo_list_title[name=?]", "todo_list[title]"
-
-      assert_select "textarea#todo_list_description[name=?]", "todo_list[description]"
-    end
-  end
 end
